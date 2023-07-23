@@ -1,6 +1,7 @@
 ## RISC-V Assembly Instructions with Illegal Operands
 
-In this repository, we examine two RISC-V assembly instructions that contain illegal operands and provide fixed versions for them. The instructions under consideration are as follows:
+In this challenge, i found two RISC-V assembly instructions that contain illegal operands as shown in this screenshot.
+![Bugs Encountered](imgs/bug_encountered.png)
 
 ### Instruction 1: `and s7, ra, z4`
 
