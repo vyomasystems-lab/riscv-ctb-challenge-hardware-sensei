@@ -25583,7 +25583,7 @@ RVTEST_CODE_BEGIN
 	and s2, s1, s5
 	and a3, s0, a7
 	# andi s5, t1, s0
-	and s5, t1, s0
+	andi s5, t1, 0x000F
 	and tp, a0, a7
 	and s11, s5, s9
 	and sp, a4, a6
