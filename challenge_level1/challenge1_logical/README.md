@@ -1,6 +1,7 @@
 ## RISC-V Assembly Instructions with Illegal Operands
 
 In this challenge, i found two RISC-V assembly instructions that contain illegal operands as shown in this screenshot.
+
 ![Bugs Encountered](imgs/bug_encountered.png)
 
 ### Instruction 1: `and s7, ra, z4`
@@ -13,6 +14,8 @@ In this challenge, i found two RISC-V assembly instructions that contain illegal
 
 **Fixed Instruction:** `and s7, ra, x4`
 
+![Instruction 1 fixed](imgs/inst1_fixed.png)
+
 ### Instruction 2: `andi s5, t1, s0`
 
 **Issue:** The instruction attempts to use `s0` as an immediate value, which is not allowed for the `andi` instruction.
@@ -22,3 +25,9 @@ In this challenge, i found two RISC-V assembly instructions that contain illegal
 **Fix:** To resolve this issue, we should replace `s0` with a valid 32-bit immediate value.
 
 **Fixed Instruction:** `andi s5, t1, 0x000F` (This example uses `0x000F` as the immediate value, but you can choose any valid 32-bit immediate value based on your specific requirement).
+
+![Instruction 2 fixed](imgs/inst2_fixed.png)
+
+Finally the build concluded without any errors.
+
+![Bugs Caught !](imgs/bug_free.png)
