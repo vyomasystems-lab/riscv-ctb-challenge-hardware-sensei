@@ -1,4 +1,4 @@
-## RISC-V Assembly Instructions with Illegal Operands
+## Level 1 - Challenge 1 - Logical
 
 In this challenge, i found two RISC-V assembly instructions that contain illegal operands as shown in this screenshot.
 
