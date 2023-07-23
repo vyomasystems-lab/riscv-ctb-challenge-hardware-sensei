@@ -14,7 +14,7 @@ In this challenge, i found two RISC-V assembly instructions that contain illegal
 
 **Fixed Instruction:** `and s7, ra, x4`
 
-<img src="imgs/inst1_fixed.png" width="200">
+<img src="imgs/inst1_fixed.png" width="250">
 
 ### Instruction 2: `andi s5, t1, s0`
 
@@ -26,7 +26,7 @@ In this challenge, i found two RISC-V assembly instructions that contain illegal
 
 **Fixed Instruction:** `andi s5, t1, 0x000F` (This example uses `0x000F` as the immediate value, but you can choose any valid 32-bit immediate value based on your specific requirement).
 
-<img src="imgs/inst2_fixed.png" width="200">
+<img src="imgs/inst2_fixed.png" width="250">
 
 Finally the build concluded without any errors.
 
