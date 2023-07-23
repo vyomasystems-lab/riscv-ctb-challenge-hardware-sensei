@@ -10,7 +10,7 @@ In this challenge, the loop is running indefinitely as shown in this screenshot,
 
 **Fix:** Register `t5` is already set to value 3. This is also the number of times the loop should run, in `test_cases` array 3 triplets of numbers exist. We initialize `t6` register to 0 and increment by 1 in every iteraion. When `t5` equals `t6` we jump to `test_end`.
 
-<img src="imgs/insts.png" width="250">
+<img src="imgs/insts.png" width="500">
 
 Finally the build concluded without any errors.
 
