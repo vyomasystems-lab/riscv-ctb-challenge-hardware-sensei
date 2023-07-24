@@ -2,7 +2,7 @@
 
 In this challenge, AAPG (Automated Assembly Program Generation) tool is used to create and compile an assembly program as shown in this screenshot, a lot of errors are encountered while compilation phase of build.
 
-![Bugs Encountered](imgs/bug_encounter.png)
+<img src="imgs/bug_encounter.png" width="300">
 
 All errors have the same message `unrecognized opcode`
 
@@ -10,7 +10,7 @@ All errors have the same message `unrecognized opcode`
 
 - When we look at the `Makefile` as shown below, the AAPG generates architecture for `rv32`. It doesn't signify which flavor of `rv32` is being generated. That is configured through the `yaml`.
 
-<img src="imgs/compile.png" width="500">
+<img src="imgs/compile.png" width="800">
 
 - But if we look at the compile phase, the `march` is set to `rv32i` meaning multiplication and division instructions are not supported.
 - There are 5 opcodes that are repeated in all these errors :- `mulw`, `divw`, `divuw`, `remw` & `remuw`.
@@ -20,7 +20,7 @@ All errors have the same message `unrecognized opcode`
 
 - Since errors arise from Multiplication and division operations (and remainder operation which is also similar to division), i disabled `rv64m` in the config by setting it to `0`.
 
-<img src="imgs/changes.png" width="500">
+<img src="imgs/changes.png" width="400">
 
 My hunch worked and the build seems to have concluded without any errors.
 
