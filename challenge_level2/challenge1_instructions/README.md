@@ -2,7 +2,7 @@
 
 In this challenge, AAPG (Automated Assembly Program Generation) tool is used to create and compile an assembly program as shown in this screenshot, a lot of errors are encountered while compilation phase of build.
 
-<img src="imgs/bug_encounter.png" width="400">
+<img src="imgs/bug_encounter.png" width="500">
 
 All errors have the same message `unrecognized opcode`
 
