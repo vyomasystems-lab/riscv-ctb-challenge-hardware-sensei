@@ -20,7 +20,7 @@ All errors have the same message `unrecognized opcode`
 
 - Since errors arise from Multiplication and division operations (and remainder operation which is also similar to division), i disabled `rv64m` in the config by setting it to `0`.
 
-<img src="imgs/changes.png" width="400">
+<img src="imgs/changes.png" width="350">
 
 My hunch worked and the build seems to have concluded without any errors.
 
