@@ -9,7 +9,7 @@ In this challenge, AAPG (Automated Assembly Program Generation) tool is to be us
 
 - Hence the `ecause02` has been set to 1.
 
-<img src="imgs/ecause_changes.png" width="350">
+<img src="imgs/ecause_changes.png" width="400">
 
 - The instruction distribution has also been changed because of 
 
@@ -21,4 +21,4 @@ In this challenge, AAPG (Automated Assembly Program Generation) tool is to be us
 
 - Finally running the `Makefile` results in 10 exceptions.
 
-<img src="imgs/exceptions.png" width="350">
+<img src="imgs/exceptions.png" width="500">
