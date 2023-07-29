@@ -15,3 +15,11 @@
 ### Reason for Error
 
 Upon further inspection I found that `spike.dump` is missing the last 4 lines from the `rtl.dump`. This indicates that some instructions that were tested on the RTL were not present in the `test.S` provided in the repo. Hence, adding those instructions to our assembly test file would clear out the discrepancies between the dump files.
+
+### How did test pass before ??
+
+The reason due to which test was passing before edits were made to  the `Makefile` is that the `rtl.dump`, which is ideal test log, was being tampered by the replacing it with anohter file. These commands are shown in below screenshot.
+
+<img src="imgs/sol.png" width="500">
+
+As showm these lines were commented out to retain the originally intended ideal contents of `rtl.dump`
