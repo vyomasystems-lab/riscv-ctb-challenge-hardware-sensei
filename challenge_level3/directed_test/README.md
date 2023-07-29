@@ -20,7 +20,7 @@ Upon further inspection I found that `spike.dump` is missing the last 4 lines fr
 
 ## How did test pass before ??
 
-The reason due to which test was passing before edits were made to  the `Makefile` is that the `rtl.dump`, which is ideal test log, was being tampered with, by the replacing it with anohter file `temp.dump`. These commands are shown in below screenshot.
+The reason due to which test was passing before edits were made to  the `Makefile` is that the `rtl.dump`, which is ideal test log, was being tampered with, by the replacing it with anohter file `temp.dump`. These commands are shown in below screenshot. A `temp.dump` is created by removing 4 lines from `rtl.dump`, then the contents of `rtl.dump` are replaced with `temp.dump`, thereby removing 4 lines from `rtl.dump`.
 
 <img src="imgs/sol.png" width="500">
 
