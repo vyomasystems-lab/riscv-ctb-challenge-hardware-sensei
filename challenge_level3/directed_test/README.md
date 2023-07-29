@@ -1,6 +1,6 @@
 # Level 3 - Directed Test (Given Design)
 
-In this challenge the aim was to alter either or both the `Makefile` & `test.S` to make sure the bugs in th edesign are caught. As explained below I have altered only the `Makefile` to expose the bugs.
+In this challenge the aim was to alter either or both the `Makefile` & `test.S` to make sure the bugs in the design are caught. As explained below I have altered only the `Makefile` to expose the bugs.
 
 ## Error screenshot
 
@@ -8,7 +8,7 @@ In this challenge the aim was to alter either or both the `Makefile` & `test.S` 
 
 ## Observations
 
-1. **Missing Lines**: The diff output shows that four lines are missing in the `spike.dump` log when compared to the `rtl.dump` log. These lines have addresses `0x80000054,` `0x80000058,` `0x8000005c,` and `0x80000060.`
+1. **Missing Lines**: The diff output shows that four lines are missing in the `spike.dump` when compared to the `rtl.dump`. These lines have addresses `0x80000054,` `0x80000058,` `0x8000005c,` and `0x80000060.`
 
 2. **Address and Instruction Information**: The addresses `0x80000054` and instructions `0x01efa023` provide information about the program counter and the instructions being executed at those points in the simulation.
 
