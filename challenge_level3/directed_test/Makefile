@@ -18,8 +18,8 @@ sim: spike
 	elf2hex  4  8388608 test.elf 2147483648 > code.mem
 	@ln -sf $(PWD)/../riscv/* .
 	./riscv_buggy
-	head -n -4 rtl.dump > temp.dump
-	cp temp.dump rtl.dump
+	# head -n -4 rtl.dump > temp.dump
+	# cp temp.dump rtl.dump
 	@echo '[UpTickPro] Comparison ------'
 	diff rtl.dump spike.dump
 	
