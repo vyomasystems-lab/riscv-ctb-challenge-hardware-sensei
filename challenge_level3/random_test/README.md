@@ -1,6 +1,6 @@
-# Level 3 - Directed Test (Given Design)
+# Level 3 - Random Test (Given Design)
 
-In this challenge the aim was to alter either or both the `Makefile` & `test.S` to make sure the bugs in the design are caught. As explained below I have altered only the `Makefile` to expose the bugs.
+In this challenge the aim was to alter either or both the `Makefile` & `rv32i.yaml` to make sure the bugs in the design are caught. As explained below I have altered only the `Makefile` to expose the bugs.
 
 ## Error screenshot
 
