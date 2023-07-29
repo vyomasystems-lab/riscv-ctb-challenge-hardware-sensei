@@ -1,5 +1,7 @@
 # Level 3 - Directed Test (Given Design)
 
+In this challenge the aim was to alter either or both the `Makefile` & `test.S` to make sure the bugs in th edesign are caught. As explained below I have altered only the `Makefile` to expose the bugs.
+
 ## Error screenshot
 
 <img src="imgs/error.png" width="450">
