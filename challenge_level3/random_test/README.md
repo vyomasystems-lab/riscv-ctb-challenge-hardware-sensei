@@ -18,7 +18,7 @@ The instruction distribution was changed from only having compute instructions t
 
 The difference in the two dumps is analysed with the help of the `awk` utility. The counting of the unique opcodes lets us know the exact number of instructions whose implementation has been compromised in given design.
 
-<img src="imgs/sol_make_1.png" width="500">
+<img src="imgs/sol_make_1.png" width="1000">
 
 The creation of `temp.dump` and it replacing `rtl.dump` both lines are commented out.
 
@@ -30,7 +30,7 @@ There are changes in the output of the instructions. The opcodes of these instru
 
 **All 48 errors are similar, same PC address, same instruction code, same registers, just different outputs.**
 
-<img src="imgs/uniq.png" width="500">
+<img src="imgs/uniq.png" width="1000">
 
 The following is the output of command `diff rtl.dump spike.dump`
 
