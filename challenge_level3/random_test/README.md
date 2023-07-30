@@ -6,23 +6,23 @@ In this challenge the aim was to alter either or both the `Makefile` & `rv32i.ya
 
 A total of 41 discrepancies have been caught in the following screenshots between `rtl.dump` & `spike.dump`
 
-<img src="imgs/error (3).png"  width="450">
-<img src="imgs/error (4).png"  width="450">
-<img src="imgs/error (5).png"  width="450">
-<img src="imgs/error (6).png"  width="450">
-<img src="imgs/error (7).png"  width="450">
-<img src="imgs/error (8).png"  width="450">
-<img src="imgs/error (9).png"  width="450">
-<img src="imgs/error (10).png" width="450">
-<img src="imgs/error (11).png" width="450">
-<img src="imgs/error (12).png" width="450">
-<img src="imgs/error (14).png" width="450">
-<img src="imgs/error (15).png" width="450">
-<img src="imgs/error (16).png" width="450">
-<img src="imgs/error (17).png" width="450">
-<img src="imgs/error (18).png" width="450">
-<img src="imgs/error (19).png" width="450">
-<img src="imgs/error (20).png" width="450">
+<img src="imgs/error (3).png"  width="800">
+<img src="imgs/error (4).png"  width="800">
+<img src="imgs/error (5).png"  width="800">
+<img src="imgs/error (6).png"  width="800">
+<img src="imgs/error (7).png"  width="800">
+<img src="imgs/error (8).png"  width="800">
+<img src="imgs/error (9).png"  width="800">
+<img src="imgs/error (10).png" width="800">
+<img src="imgs/error (11).png" width="800">
+<img src="imgs/error (12).png" width="800">
+<img src="imgs/error (14).png" width="800">
+<img src="imgs/error (15).png" width="800">
+<img src="imgs/error (16).png" width="800">
+<img src="imgs/error (17).png" width="800">
+<img src="imgs/error (18).png" width="800">
+<img src="imgs/error (19).png" width="800">
+<img src="imgs/error (20).png" width="800">
 
 
 Based on the output of the `diff` command, we can analyze the differences between the `rtl.dump` and `spike.dump` files. Each line in the `diff` output represents a difference between the two files. Let's analyze each line:
@@ -41,11 +41,11 @@ All the errors are similar, same PC address, same instruction code, same registe
 
 The total number of instructions produced by AAPG tool was increased to 1000 to increase chances of catching bugs.
 
-<img src="imgs/sol_yaml_1.png" width="500">
+<img src="imgs/sol_yaml_1.png" width="400">
 
 The instruction distribution was changed from only having compute instructions to now having fence and data instructions as well.
 
-<img src="imgs/sol_yaml_2.png" width="500">
+<img src="imgs/sol_yaml_2.png" width="300">
 
 ### MAKEFILE changes
 
