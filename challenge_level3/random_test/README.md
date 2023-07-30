@@ -30,7 +30,7 @@ The opcodes of the instructions that are compromised in given design have been p
 
 <img src="imgs/uniq.png" width="1000">
 
-**All 202 errors are similar, same PC address, same instruction code, same registers, just different outputs.**
+**All 202 Bugs are similar, same PC address, same instruction code, same registers, just different outputs.**
 
 The following is the output of command `diff rtl.dump spike.dump`
 
