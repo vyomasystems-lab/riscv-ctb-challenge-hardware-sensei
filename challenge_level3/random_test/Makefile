@@ -27,7 +27,10 @@ sim: spike
 	# head -n -4 rtl.dump > temp.dump
 	# cp temp.dump rtl.dump
 	@echo '[UpTickPro] Comparison ------'
-	diff rtl.dump spike.dump
+	-diff rtl.dump spike.dump > diff.txt
+
+	@echo "Unique opcodes: $(shell awk '/^< .* \((0x[0-9a-fA-F]+)\)/ {print substr($$3, 2, length($$3)-2)}' diff.txt | sort -u)"
+	@echo "$(shell awk '/^< .* \((0x[0-9a-fA-F]+)\)/ {print substr($$3, 2, length($$3)-2)}' diff.txt | sort -u | wc -l) unique opcodes found"
 
 clean:
 	@echo '[UpTickPro] Clean ------'
