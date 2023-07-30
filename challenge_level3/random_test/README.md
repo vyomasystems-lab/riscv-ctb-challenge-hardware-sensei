@@ -1,27 +1,54 @@
 # Level 3 - Random Test (Given Design)
 
-In this challenge the aim was to alter either or both the `Makefile` & `rv32i.yaml` to make sure the bugs in the design are caught. As explained below I have altered only the `Makefile` to expose the bugs.
+In this challenge the aim was to alter either or both the `Makefile` & `rv32i.yaml` to make sure the bugs in the design are caught. As explained below I have altered both these files to expose the bugs.
 
-## Error screenshot
+## Error screenshots and Observations
 
-<img src="imgs/error.png" width="450">
+A total of 41 discrepancies have been caught in the following screenshots between `rtl.dump` & `spike.dump`
 
-## Observations
+<img src="imgs/error (3).png"  width="450">
+<img src="imgs/error (4).png"  width="450">
+<img src="imgs/error (5).png"  width="450">
+<img src="imgs/error (6).png"  width="450">
+<img src="imgs/error (7).png"  width="450">
+<img src="imgs/error (8).png"  width="450">
+<img src="imgs/error (9).png"  width="450">
+<img src="imgs/error (10).png" width="450">
+<img src="imgs/error (11).png" width="450">
+<img src="imgs/error (12).png" width="450">
+<img src="imgs/error (14).png" width="450">
+<img src="imgs/error (15).png" width="450">
+<img src="imgs/error (16).png" width="450">
+<img src="imgs/error (17).png" width="450">
+<img src="imgs/error (18).png" width="450">
+<img src="imgs/error (19).png" width="450">
+<img src="imgs/error (20).png" width="450">
 
-1. **Missing Lines**: The `diff` output shows that four lines are missing in the `spike.dump` when compared to the `rtl.dump`. These lines have addresses `0x80000054,` `0x80000058,` `0x8000005c,` and `0x80000060`.
 
-2. **Address and Instruction Information**: The addresses `0x80000054` and instructions `0x01efa023` provide information about the program counter and the instructions being executed at those points in the simulation.
+Based on the output of the `diff` command, we can analyze the differences between the `rtl.dump` and `spike.dump` files. Each line in the `diff` output represents a difference between the two files. Let's analyze each line:
 
-3. **Register Values**: Each line indicates change in values of the registers `x30` & `x0` after executing the corresponding instructions.
+1. `219c219`: This line indicates a change at line 219 of both files. The "c" stands for "changed," meaning that the content at this line is different in both files.
 
-## Reason for Error
+`< 3 0x80000734 (0x3dfeeb93) x23 0x5e3ea2a7`: This line shows the content of line 3 in `rtl.dump`. The values in parentheses represent the hexadecimal values of the instruction, register `x23`, and immediate value. The line indicates that in `spike.dump`, at address `0x80000734`, the instruction value is `0x3dfeeb93`, and register `x23` contains the value `0x5e3ea2a7`.
 
-Upon further inspection I found that `spike.dump` is missing the last 4 lines from the `rtl.dump`. This indicates that some instructions tested on the RTL were not present in the `test.S` provided in the repo. Hence, if we want to resolve this issue (not the aim of this challenge) adding those instructions to our assembly test file would clear out the discrepancies between the dump files.
+`> 3 0x80000734 (0x3dfeeb93) x23 0x5e3ea3ff`: This line shows the content of line 3 in `spike.dump`. The values in parentheses represent the hexadecimal values of the instruction, register `x23`, and immediate value. The line indicates that in `spike.dump`, at address `0x80000734`, the instruction value is `0x3dfeeb93`, and register `x23` contains the value `0x5e3ea3ff`.
 
-## How did test pass before ??
+All the errors are similar, same PC address, same instruction code, same registers just different outputs.
 
-The reason due to which test was passing before edits were made to  the `Makefile` is that the `rtl.dump`, which is ideal test log, was being tampered with, by the replacing it with anohter file `temp.dump`. These commands are shown in below screenshot. A `temp.dump` is created by removing 4 lines from `rtl.dump`, then the contents of `rtl.dump` are replaced with `temp.dump`, thereby removing 4 lines from `rtl.dump`.
+## Measures taken to produce errors
 
-<img src="imgs/sol.png" width="500">
+### YAML changes
 
-As shown these lines were commented out, to retain the originally intended ideal contents of `rtl.dump`.
+The total number of instructions produced by AAPG tool was increased to 1000 to increase chances of catching bugs.
+
+<img src="imgs/sol_yaml_1.png" width="500">
+
+The instruction distribution was changed from only having compute instructions to now having fence and data instructions as well.
+
+<img src="imgs/sol_yaml_2.png" width="500">
+
+### MAKEFILE changes
+
+The creation of `temp.dump` and it replacing `rtl.dump` both lines are commented out.
+
+<img src="imgs/sol_make.png" width="500">
