@@ -8,8 +8,8 @@ run --simulator pyflow --simulator_yaml /tools/riscv-dv/yaml/simulator.yaml --no
 
 Edited the testlist to include `riscv_instr_cov_test`
 
-<img src="imgs/testlist.png" width="400">
+<img src="imgs/testlist.png" width="800">
 
 The arithmetic basic test passes.
 
-<img src="imgs/console.png" width="400">
+<img src="imgs/console.png" width="1000">
