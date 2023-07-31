@@ -1,6 +1,6 @@
 # RISCV - Capture The Bug - Hackathon
 
-[Level 1 - Challenge 1 - Logical] (challenge_level1/challenge1_logical)
+[Level 1 - Challenge 1 - Logical] (https://github.com/vyomasystems-lab/riscv-ctb-challenge-hardware-sensei/tree/main/challenge_level1/challenge1_logical)
 [Level 1 - Challenge 2 - Loop] (challenge_level1/challenge2_loop)
 [Level 1 - Challenge 3 - Illegal] (challenge_level1/challenge3_illegal)
 [Level 2 - Challenge 1 - Instructions] (challenge_level2/challenge1_instructions)
