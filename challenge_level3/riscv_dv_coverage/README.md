@@ -1,12 +1,15 @@
 # RISCV-DV
 
 Test generation using riscv-dv
+
 ```
-run --target rv32i --test riscv_arithmetic_basic_test --testlist testlist.yaml --simulator pyflow
+run --simulator pyflow --simulator_yaml /tools/riscv-dv/yaml/simulator.yaml --noclean --so --cov -tl testlist.yaml -tn riscv_arithmetic_basic_test --steps gen --sim_opts " --trace_csv=out/spike_sim/riscv_arithmetic_basic_test.0.csv " --target rv32i
 ```
 
-Coverage related information is obtained in the below link:
-https://github.com/chipsalliance/riscv-dv/tree/master/pygen/pygen_src
+Edited the testlist to include `riscv_instr_cov_test`
 
-# Challenge
-The challenge is to fix the tool problem in generating coverage and make rv32i ISA coverage 100%
+<img src="imgs/testlist.png" width="400">
+
+The arithmetic basic test passes.
+
+<img src="imgs/console.png" width="400">
